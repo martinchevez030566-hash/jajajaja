@@ -1,0 +1,263 @@
+<?php
+/**
+ * =======================================================
+ * SISTEMA DE GUÍAS DE REMISIÓN ELECTRÓNICA - GRE
+ * =======================================================
+ * 
+ * Archivo: gre_mpcl/librerias/Database.class.php
+ * Descripción: Clase centralizada para manejo de conexión a SQL Server
+ * Autor: Sistema GRE
+ * Fecha: 2025-10-26
+ * 
+ * Dependencias:
+ * - ../conexion.php (conexión existente)
+ * - pdo_sqlsrv Extension
+ * 
+ * =======================================================
+ */
+
+class Database {
+    
+    private static $instance = null;
+    private $conexion;
+    
+    /**
+     * Constructor privado (Patrón Singleton)
+     */
+    private function __construct() {
+        require_once '../config/conexion.php';
+        $this->conexion = $base_de_datos;
+    }
+    
+    /**
+     * Obtener instancia única de la clase
+     * @return Database
+     */
+    public static function getInstance() {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+    
+    /**
+     * Obtener conexión SQL Server
+     * @return resource
+     */
+    public function getConnection() {
+        return $this->conexion;
+    }
+    
+    /**
+     * Ejecutar consulta SELECT
+     * @param string $sql Consulta SQL
+     * @param array $params Parámetros
+     * @return array|false Resultados o false
+     */
+    public function select($sql, $params = []) {
+        try {
+            $stmt = sqlsrv_query($this->conexion, $sql, $params);
+            
+            if ($stmt === false) {
+                $this->logError("Error en SELECT", $sql, sqlsrv_errors());
+                return false;
+            }
+            
+            $resultados = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                // Convertir DateTime a string
+                foreach ($row as $key => $value) {
+                    if ($value instanceof DateTime) {
+                        $row[$key] = $value->format('Y-m-d H:i:s');
+                    }
+                }
+                $resultados[] = $row;
+            }
+            
+            sqlsrv_free_stmt($stmt);
+            return $resultados;
+            
+        } catch (Exception $e) {
+            $this->logError("Excepción en SELECT", $sql, $e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
+     * Ejecutar consulta SELECT y retornar un solo registro
+     * @param string $sql Consulta SQL
+     * @param array $params Parámetros
+     * @return array|false Registro o false
+     */
+    public function selectOne($sql, $params = []) {
+        $resultado = $this->select($sql, $params);
+        return $resultado ? $resultado[0] : false;
+    }
+    
+    /**
+     * Ejecutar INSERT, UPDATE, DELETE
+     * @param string $sql Consulta SQL
+     * @param array $params Parámetros
+     * @return bool|int ID insertado (para INSERT) o true/false
+     */
+    public function execute($sql, $params = []) {
+        try {
+            $stmt = sqlsrv_query($this->conexion, $sql, $params);
+            
+            if ($stmt === false) {
+                $this->logError("Error en EXECUTE", $sql, sqlsrv_errors());
+                return false;
+            }
+            
+            // Si es un INSERT, obtener el ID generado
+            if (stripos(trim($sql), 'INSERT') === 0) {
+                $sqlId = "SELECT @@IDENTITY AS ID";
+                $stmtId = sqlsrv_query($this->conexion, $sqlId);
+                if ($stmtId) {
+                    $rowId = sqlsrv_fetch_array($stmtId, SQLSRV_FETCH_ASSOC);
+                    sqlsrv_free_stmt($stmtId);
+                    sqlsrv_free_stmt($stmt);
+                    return $rowId ? (int)$rowId['ID'] : true;
+                }
+            }
+            
+            sqlsrv_free_stmt($stmt);
+            return true;
+            
+        } catch (Exception $e) {
+            $this->logError("Excepción en EXECUTE", $sql, $e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
+     * Iniciar transacción
+     * @return bool
+     */
+    public function beginTransaction() {
+        return sqlsrv_begin_transaction($this->conexion);
+    }
+    
+    /**
+     * Confirmar transacción
+     * @return bool
+     */
+    public function commit() {
+        return sqlsrv_commit($this->conexion);
+    }
+    
+    /**
+     * Revertir transacción
+     * @return bool
+     */
+    public function rollback() {
+        return sqlsrv_rollback($this->conexion);
+    }
+    
+    /**
+     * Escapar valores para prevenir SQL Injection
+     * @param string $value Valor a escapar
+     * @return string Valor escapado
+     */
+    public function escape($value) {
+        return str_replace("'", "''", $value);
+    }
+    
+    /**
+     * Obtener configuración del sistema GRE
+     * @param string $parametro Nombre del parámetro (opcional)
+     * @return array|string|false
+     */
+    public function getConfig($parametro = null) {
+        if ($parametro) {
+            $sql = "SELECT VALOR FROM MPCL.dbo.TBL_CONFIG_GRE WHERE PARAMETRO = ?";
+            $result = $this->selectOne($sql, [$parametro]);
+            return $result ? $result['VALOR'] : false;
+        } else {
+            $sql = "SELECT PARAMETRO, VALOR FROM MPCL.dbo.TBL_CONFIG_GRE";
+            $results = $this->select($sql);
+            $config = [];
+            foreach ($results as $row) {
+                $config[$row['PARAMETRO']] = $row['VALOR'];
+            }
+            return $config;
+        }
+    }
+    
+    /**
+     * Actualizar configuración
+     * @param string $parametro Nombre del parámetro
+     * @param string $valor Nuevo valor
+     * @return bool
+     */
+    public function setConfig($parametro, $valor) {
+        $sql = "UPDATE MPCL.dbo.TBL_CONFIG_GRE SET VALOR = ? WHERE PARAMETRO = ?";
+        return $this->execute($sql, [$valor, $parametro]);
+    }
+    
+    /**
+     * Registrar log de operaciones
+     * @param int $idGuia ID de la guía
+     * @param string $accion Acción realizada
+     * @param string $estadoAnterior Estado anterior
+     * @param string $estadoNuevo Estado nuevo
+     * @param string $descripcion Descripción
+     * @param string $request Request enviado
+     * @param string $response Response recibido
+     * @return bool
+     */
+    public function registrarLog($idGuia, $accion, $estadoAnterior = null, $estadoNuevo = null, 
+                                  $descripcion = null, $request = null, $response = null) {
+        $sql = "INSERT INTO MPCL.dbo.TBL_GUIAS_LOG 
+                (ID_GUIA_CAB, ACCION, ESTADO_ANTERIOR, ESTADO_NUEVO, DESCRIPCION, REQUEST, RESPONSE, USUARIO)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        
+        $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'SYSTEM';
+        
+        return $this->execute($sql, [
+            $idGuia,
+            $accion,
+            $estadoAnterior,
+            $estadoNuevo,
+            $descripcion,
+            $request,
+            $response,
+            $usuario
+        ]);
+    }
+    
+    /**
+     * Registrar error en log
+     * @param string $tipo Tipo de error
+     * @param string $sql Consulta SQL
+     * @param mixed $error Detalles del error
+     */
+    private function logError($tipo, $sql, $error) {
+        $logFile = __DIR__ . '/../logs/database_errors.log';
+        $logDir = dirname($logFile);
+        
+        if (!file_exists($logDir)) {
+            mkdir($logDir, 0777, true);
+        }
+        
+        $errorMsg = date('Y-m-d H:i:s') . " | $tipo\n";
+        $errorMsg .= "SQL: $sql\n";
+        $errorMsg .= "Error: " . print_r($error, true) . "\n";
+        $errorMsg .= str_repeat("-", 80) . "\n";
+        
+        file_put_contents($logFile, $errorMsg, FILE_APPEND);
+    }
+    
+    /**
+     * Evitar clonación
+     */
+    private function __clone() {}
+    
+    /**
+     * Evitar deserialización
+     */
+    public function __wakeup() {
+        throw new Exception("No se puede deserializar singleton");
+    }
+}
+?>
