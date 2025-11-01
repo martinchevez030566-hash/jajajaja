@@ -1,0 +1,669 @@
+/**
+ * =======================================================
+ * SISTEMA DE GUÍAS DE REMISIÓN ELECTRÓNICA - GRE
+ * =======================================================
+ * 
+ * Archivo: gre_mpcl/assets/css/gre-styles.css
+ * Descripción: Estilos personalizados del sistema GRE
+ * Autor: Sistema GRE
+ * Fecha: 2025-10-26
+ * 
+ * =======================================================
+ */
+
+/* ===================================== */
+/* VARIABLES CSS */
+/* ===================================== */
+:root {
+    --gre-primary: #2563eb;
+    --gre-primary-dark: #1e40af;
+    --gre-secondary: #64748b;
+    --gre-success: #10b981;
+    --gre-danger: #ef4444;
+    --gre-warning: #f59e0b;
+    --gre-info: #06b6d4;
+    --gre-light: #f8fafc;
+    --gre-dark: #1e293b;
+    
+    --gre-border-radius: 8px;
+    --gre-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --gre-transition: all 0.3s ease;
+}
+
+/* ===================================== */
+/* ESTILOS GENERALES */
+/* ===================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainContent {
+    flex: 1;
+}
+
+/* ===================================== */
+/* NAVBAR */
+/* ===================================== */
+.bg-gre-primary {
+    background: linear-gradient(135deg, var(--gre-primary) 0%, var(--gre-primary-dark) 100%);
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: var(--gre-transition);
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--gre-transition);
+    border-radius: 6px;
+    margin: 0 4px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--gre-box-shadow);
+    border-radius: var(--gre-border-radius);
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.6rem 1.2rem;
+    transition: var(--gre-transition);
+}
+
+.dropdown-item:hover {
+    background-color: var(--gre-light);
+    color: var(--gre-primary);
+    transform: translateX(4px);
+}
+
+.dropdown-item.active {
+    background-color: var(--gre-primary);
+}
+
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+/* ===================================== */
+/* BREADCRUMB */
+/* ===================================== */
+.breadcrumb {
+    background-color: white;
+    padding: 0.75rem 1rem;
+    border-radius: var(--gre-border-radius);
+    box-shadow: var(--gre-box-shadow);
+}
+
+.breadcrumb-item a {
+    color: var(--gre-primary);
+    text-decoration: none;
+    transition: var(--gre-transition);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--gre-primary-dark);
+    text-decoration: underline;
+}
+
+/* ===================================== */
+/* CARDS Y CONTENEDORES */
+/* ===================================== */
+.card {
+    border: none;
+    border-radius: var(--gre-border-radius);
+    box-shadow: var(--gre-box-shadow);
+    transition: var(--gre-transition);
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background-color: var(--gre-dark);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--gre-border-radius) var(--gre-border-radius) 0 0 !important;
+    padding: 1rem 1.25rem;
+}
+
+.card-header i {
+    margin-right: 8px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ===================================== */
+/* BOTONES */
+/* ===================================== */
+.btn {
+    border-radius: var(--gre-border-radius);
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    transition: var(--gre-transition);
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gre-primary) 0%, var(--gre-primary-dark) 100%);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--gre-primary-dark) 0%, #1e3a8a 100%);
+}
+
+.btn-success {
+    background-color: var(--gre-success);
+}
+
+.btn-danger {
+    background-color: var(--gre-danger);
+}
+
+.btn-warning {
+    background-color: var(--gre-warning);
+}
+
+.btn-info {
+    background-color: var(--gre-info);
+}
+
+.btn i {
+    margin-right: 6px;
+}
+
+/* ===================================== */
+/* FORMULARIOS */
+/* ===================================== */
+.form-label {
+    font-weight: 600;
+    color: var(--gre-dark);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-label i {
+    margin-right: 6px;
+    color: var(--gre-primary);
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #e2e8f0;
+    border-radius: var(--gre-border-radius);
+    padding: 0.6rem 1rem;
+    transition: var(--gre-transition);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gre-primary);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.form-control.is-invalid {
+    border-color: var(--gre-danger);
+}
+
+.form-control.is-valid {
+    border-color: var(--gre-success);
+}
+
+.invalid-feedback,
+.valid-feedback {
+    font-size: 0.875rem;
+    margin-top: 0.35rem;
+}
+
+/* ===================================== */
+/* TABLAS */
+/* ===================================== */
+.table {
+    background-color: white;
+    border-radius: var(--gre-border-radius);
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--gre-dark);
+    color: white;
+}
+
+.table thead th {
+    font-weight: 600;
+    padding: 1rem;
+    border: none;
+}
+
+.table tbody tr {
+    transition: var(--gre-transition);
+}
+
+.table tbody tr:hover {
+    background-color: var(--gre-light);
+}
+
+.table tbody td {
+    padding: 0.9rem 1rem;
+    vertical-align: middle;
+}
+
+/* DataTables personalización */
+.dataTables_wrapper {
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--gre-border-radius);
+    box-shadow: var(--gre-box-shadow);
+}
+
+.dataTables_filter input {
+    border: 2px solid #e2e8f0;
+    border-radius: var(--gre-border-radius);
+    padding: 0.4rem 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.dataTables_length select {
+    border: 2px solid #e2e8f0;
+    border-radius: var(--gre-border-radius);
+    padding: 0.4rem 0.8rem;
+    margin: 0 0.5rem;
+}
+
+.page-link {
+    color: var(--gre-primary);
+    border-radius: var(--gre-border-radius);
+    margin: 0 2px;
+}
+
+.page-link:hover {
+    background-color: var(--gre-primary);
+    color: white;
+}
+
+.page-item.active .page-link {
+    background-color: var(--gre-primary);
+    border-color: var(--gre-primary);
+}
+
+/* ===================================== */
+/* BADGES Y ESTADOS */
+/* ===================================== */
+.badge {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 20px;
+}
+
+.badge i {
+    margin-right: 4px;
+}
+
+/* Estados SUNAT */
+.badge-aceptado {
+    background-color: var(--gre-success);
+    color: white;
+}
+
+.badge-pendiente {
+    background-color: var(--gre-warning);
+    color: white;
+}
+
+.badge-rechazado {
+    background-color: var(--gre-danger);
+    color: white;
+}
+
+.badge-anulado {
+    background-color: var(--gre-secondary);
+    color: white;
+}
+
+/* ===================================== */
+/* ALERTS */
+/* ===================================== */
+.alert {
+    border: none;
+    border-radius: var(--gre-border-radius);
+    padding: 1rem 1.25rem;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    border-left-color: var(--gre-success);
+    color: #065f46;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    border-left-color: var(--gre-danger);
+    color: #991b1b;
+}
+
+.alert-warning {
+    background-color: #fef3c7;
+    border-left-color: var(--gre-warning);
+    color: #92400e;
+}
+
+.alert-info {
+    background-color: #cffafe;
+    border-left-color: var(--gre-info);
+    color: #155e75;
+}
+
+/* ===================================== */
+/* MODALES */
+/* ===================================== */
+.modal-content {
+    border: none;
+    border-radius: var(--gre-border-radius);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-bottom: 2px solid #e2e8f0;
+    padding: 1.25rem 1.5rem;
+}
+.modal-header.bg-primary,
+.modal-header.bg-success,
+.modal-header.bg-danger,
+.modal-header.bg-warning,
+.modal-header.bg-info {
+color: white;
+}.modal-body {
+padding: 1.5rem;
+}.modal-footer {
+border-top: 2px solid #e2e8f0;
+padding: 1rem 1.5rem;
+}/* ===================================== /
+/ LOADING OVERLAY /
+/ ===================================== */
+.loading-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 9999;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}.loading-overlay .spinner-border {
+width: 3rem;
+height: 3rem;
+}/* ===================================== /
+/ ICONOS DE ACCIÓN /
+/ ===================================== */
+.icon-expand {
+cursor: pointer;
+transition: var(--gre-transition);
+color: var(--gre-primary);
+}.icon-expand:hover {
+color: var(--gre-primary-dark);
+transform: scale(1.2);
+}.icon-expand.active {
+transform: rotate(90deg);
+}/* ===================================== /
+/ STATS CARDS (Para Dashboard) /
+/ ===================================== */
+.stat-card {
+background: linear-gradient(135deg, var(--gre-primary) 0%, var(--gre-primary-dark) 100%);
+color: white;
+border-radius: var(--gre-border-radius);
+padding: 1.5rem;
+box-shadow: var(--gre-box-shadow);
+transition: var(--gre-transition);
+}.stat-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}.stat-card .stat-icon {
+font-size: 3rem;
+opacity: 0.3;
+position: absolute;
+right: 1rem;
+top: 50%;
+transform: translateY(-50%);
+}.stat-card .stat-value {
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 0.5rem;
+}.stat-card .stat-label {
+font-size: 0.9rem;
+opacity: 0.9;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}/* Variantes de colores */
+.stat-card.stat-success {
+background: linear-gradient(135deg, var(--gre-success) 0%, #059669 100%);
+}.stat-card.stat-danger {
+background: linear-gradient(135deg, var(--gre-danger) 0%, #dc2626 100%);
+}.stat-card.stat-warning {
+background: linear-gradient(135deg, var(--gre-warning) 0%, #d97706 100%);
+}.stat-card.stat-info {
+background: linear-gradient(135deg, var(--gre-info) 0%, #0891b2 100%);
+}/* ===================================== /
+/ TOOLTIPS /
+/ ===================================== */
+.tooltip {
+font-size: 0.85rem;
+}.tooltip-inner {
+background-color: var(--gre-dark);
+border-radius: var(--gre-border-radius);
+padding: 0.5rem 1rem;
+}/* ===================================== /
+/ PROGRESS BAR /
+/ ===================================== */
+.progress {
+border-radius: 10px;
+height: 1.5rem;
+background-color: #e2e8f0;
+}.progress-bar {
+border-radius: 10px;
+background: linear-gradient(90deg, var(--gre-primary) 0%, var(--gre-primary-dark) 100%);
+font-weight: 600;
+}/* ===================================== /
+/ AUTOCOMPLETE PERSONALIZADO /
+/ ===================================== */
+.ui-autocomplete {
+max-height: 300px;
+overflow-y: auto;
+overflow-x: hidden;
+border-radius: var(--gre-border-radius);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+border: none;
+}.ui-menu-item {
+padding: 0.5rem 1rem;
+cursor: pointer;
+transition: var(--gre-transition);
+}.ui-menu-item:hover {
+background-color: var(--gre-light);
+}.ui-state-active {
+background-color: var(--gre-primary) !important;
+color: white !important;
+border: none !important;
+}/* ===================================== /
+/ SELECT2 PERSONALIZADO /
+/ ===================================== */
+.select2-container--bootstrap-5 .select2-selection {
+border: 2px solid #e2e8f0;
+border-radius: var(--gre-border-radius);
+}.select2-container--bootstrap-5.select2-container--focus .select2-selection,
+.select2-container--bootstrap-5.select2-container--open .select2-selection {
+border-color: var(--gre-primary);
+box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}.select2-dropdown {
+border: 2px solid var(--gre-primary);
+border-radius: var(--gre-border-radius);
+box-shadow: var(--gre-box-shadow);
+}/* ===================================== /
+/ FOOTER /
+/ ===================================== */
+.footer {
+background-color: white;
+border-top: 2px solid #e2e8f0;
+margin-top: 2rem;
+}.footer a {
+color: var(--gre-primary);
+transition: var(--gre-transition);
+}.footer a:hover {
+color: var(--gre-primary-dark);
+}/* ===================================== /
+/ SECCIÓN DE FILTROS /
+/ ===================================== */
+.filter-section {
+background-color: white;
+padding: 1.5rem;
+border-radius: var(--gre-border-radius);
+box-shadow: var(--gre-box-shadow);
+margin-bottom: 1.5rem;
+}.filter-section .row {
+align-items: end;
+}/* ===================================== /
+/ BOTONES DE ESTADO /
+/ ===================================== */
+.btn-estado {
+padding: 0.4rem 1rem;
+font-size: 0.85rem;
+border-radius: 20px;
+font-weight: 600;
+}/* ===================================== /
+/ TABLA DETALLE EXPANDIBLE /
+/ ===================================== */
+.detalle-row {
+background-color: #f8fafc !important;
+}.detalle-row td {
+padding: 1.5rem !important;
+}/* ===================================== /
+/ ANIMACIONES /
+/ ===================================== */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}@keyframes slideIn {
+from {
+transform: translateX(-20px);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}@keyframes pulse {
+0%, 100% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.05);
+}
+}.fade-in {
+animation: fadeIn 0.3s ease-out;
+}.slide-in {
+animation: slideIn 0.3s ease-out;
+}.pulse {
+animation: pulse 2s infinite;
+}/* ===================================== /
+/ RESPONSIVE /
+/ ===================================== */
+@media (max-width: 768px) {
+.card {
+margin-bottom: 1rem;
+}.btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}.table {
+    font-size: 0.85rem;
+}.stat-card {
+    margin-bottom: 1rem;
+}.stat-card .stat-icon {
+    font-size: 2rem;
+}.stat-card .stat-value {
+    font-size: 1.5rem;
+}.modal-dialog {
+    margin: 0.5rem;
+}
+}@media (max-width: 576px) {
+.navbar-brand {
+font-size: 1rem;
+}.table thead {
+    font-size: 0.75rem;
+}.table tbody {
+    font-size: 0.8rem;
+}.filter-section {
+    padding: 1rem;
+}
+}/* ===================================== /
+/ UTILIDADES ADICIONALES /
+/ ===================================== */
+.text-primary-gre {
+color: var(--gre-primary) !important;
+}.bg-primary-gre {
+background-color: var(--gre-primary) !important;
+}.border-primary-gre {
+border-color: var(--gre-primary) !important;
+}.cursor-pointer {
+cursor: pointer;
+}.shadow-gre {
+box-shadow: var(--gre-box-shadow) !important;
+}.rounded-gre {
+border-radius: var(--gre-border-radius) !important;
+}/* ===================================== /
+/ IMPRESIÓN /
+/ ===================================== */
+@media print {
+.navbar,
+.breadcrumb,
+.footer,
+.btn,
+.filter-section {
+display: none !important;
+}.card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+}body {
+    background-color: white !important;
+}
+}
