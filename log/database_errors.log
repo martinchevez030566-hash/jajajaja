@@ -1,0 +1,918 @@
+2025-10-27 20:50:13 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-27 20:50:13 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-27 20:50:13 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-27 20:50:13 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-27 20:50:13 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:36 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:36 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:36 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:36 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:36 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:36 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:48 | Error en SELECT
+SQL: SELECT 
+                 A.A1_CALMA AS CODIGO,
+                 A.A1_CDESCRI AS NOMBRE,
+                 G.SERIE_GRE,
+                 A.A1_NNUMGUI AS CORRELATIVO
+                 FROM RSFACCAR.dbo.AL0005ALMA A
+                 INNER JOIN MPCL.dbo.TBL_ALMACENES_GRE G ON A.A1_CALMA = G.CODIGO_ALMACEN
+                 WHERE G.ESTADO = 1
+                 ORDER BY A.A1_CDESCRI
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:48 | Error en SELECT
+SQL: SELECT ID, DOCUMENTO, NOMBRE, PLACA, LICENCIA 
+                      FROM MPCL.dbo.TBL_TRANSPORTISTA 
+                      WHERE ESTADO = 1 
+                      ORDER BY NOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:13:48 | Error en SELECT
+SQL: SELECT CODIGO, DESCRIPCION 
+               FROM MPCL.dbo.TBL_MOTIVOS_TRASLADO 
+               WHERE ESTADO = 1 
+               ORDER BY CODIGO
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:26 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:26 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:26 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:26 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:26 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:26 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:30 | Error en SELECT
+SQL: SELECT PARAMETRO, VALOR FROM MPCL.dbo.TBL_CONFIG_GRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:30 | Error en SELECT
+SQL: SELECT 
+                                            COUNT(*) AS TOTAL,
+                                            SUM(CASE WHEN ESTADO_SUNAT = 'ACEPTADO' THEN 1 ELSE 0 END) AS ACEPTADAS,
+                                            SUM(CASE WHEN ESTADO_SUNAT = 'PENDIENTE' THEN 1 ELSE 0 END) AS PENDIENTES
+                                            FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:44 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:44 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:44 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:44 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:44 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:14:44 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:00 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:00 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:00 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:00 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:00 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:00 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:01 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:01 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:01 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:01 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:01 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:01 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:30 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:30 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:30 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:30 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:30 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:19:30 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:22:38 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:22:38 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'ACEPTADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:22:38 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'PENDIENTE'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:22:38 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB WHERE ESTADO_SUNAT = 'RECHAZADO'
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:22:38 | Error en SELECT
+SQL: SELECT COUNT(*) AS TOTAL FROM MPCL.dbo.TBL_GUIAS_CAB 
+                 WHERE MONTH(FECHA_EMISION) = MONTH(GETDATE()) 
+                 AND YEAR(FECHA_EMISION) = YEAR(GETDATE())
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
+2025-10-28 02:22:38 | Error en SELECT
+SQL: SELECT VE_CCODIGO, VE_CNOMBRE FROM rsfaccar.dbo.FT0005VEND ORDER BY VE_CNOMBRE
+Error: Array
+(
+    [0] => Array
+        (
+            [0] => IMSSP
+            [SQLSTATE] => IMSSP
+            [1] => -14
+            [code] => -14
+            [2] => An invalid parameter was passed to sqlsrv_query.
+            [message] => An invalid parameter was passed to sqlsrv_query.
+        )
+
+)
+
+--------------------------------------------------------------------------------
