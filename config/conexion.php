@@ -1,8 +1,8 @@
 <?php
-$contraseña = "Sapo2021!";
-$usuario = "usermpcl";
-$nombreBaseDeDatos = "RSFACCAR";
-$rutaServidor = "SERVERMPCLW";
+$contraseña = "!";
+$usuario = "";
+$nombreBaseDeDatos = "";
+$rutaServidor = "";
 try {
     $base_de_datos = new PDO("sqlsrv:server=$rutaServidor;database=$nombreBaseDeDatos", $usuario, $contraseña);
     $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION,);
@@ -11,5 +11,6 @@ try {
     echo "Ocurrió un error con la base de datos: " . $e->getMessage();
 }
 ?>
+
 
 
